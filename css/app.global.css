@@ -1,0 +1,592 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+
+@import '../core/styles/index.scss';
+
+/*
+@import "~font-awesome/css/font-awesome.css";
+*/
+
+/*
+@import "~bootstrap/dist/css/bootstrap.css";
+*/
+
+/*
+@import "~bootstrap/dist/css/bootstrap-theme.css";
+ */
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+/*
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  background-color: #232c39;
+  background-image: linear-gradient(45deg, rgba(0, 216, 255, 0.5) 10%, rgba(0, 1, 127, 0.7));
+  font-family: Arial, Helvetica, Helvetica Neue, serif;
+  overflow-y: hidden;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+
+p {
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+*/
+
+
+.mh-modal-row .mh-checkbox {
+    margin-right: 4px;
+}
+
+
+/*
+.mh-navbar {
+  font-size: 16px;
+  width:100%;
+  padding-top: 10px;
+}
+
+.mh-nav .mh-badge-right {
+  float: right;
+  margin: 10px;
+}
+
+.navbar.mh-header, .navbar-default.mh-header, .mh-header {
+  background-image: none;
+  background-color: #2C5EA7;
+  color: white;
+  height: 50px;
+  vertical-align: center;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 10px;
+  font-size: 18pt;
+}
+
+.mh-navbar-toggle {
+  float: left;
+  margin-left: 10px;
+}
+*/
+
+/* JR 10/18/18
+.mh-main-panel {
+  height: 100vh;
+}
+*/
+
+/* the next three styles let the right border fill the entire top row */
+
+/* JR 10/18/18
+.mh-top-row .mh-vertical-divider {
+  border-right: black 1px solid;
+}
+
+.mh-list-row.mh-top-row {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+
+.mh-top-row-col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+*/
+
+
+/* --- passcode modal  --- */
+
+.mh-passcode-desc {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.mh-passcode-error {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+.mh-passcode-digit {
+ margin: 10px;
+}
+
+.mh-modal-row {
+    padding-top: 6px;
+    width: 100%;
+}
+
+.mh-modal-spacer-row {
+    padding-top: 12px;
+    width: 100%;
+}
+
+/*
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.no-gutters > [class^="panel-body"],
+.no-gutters > [class*=" panel-body"] {
+    padding-right: 0;
+    padding-left: 0;
+    border-width: 1px 0px 1px 0px;
+}
+*/
+
+
+
+/* 4/16/18
+.mh-list-title-row {
+    background-color: #999
+}
+
+.mh-bold {
+    font-weight: bold;
+}
+*/
+
+/* JR 11/1/18
+.mh-right-panel {
+  background-color: #f7f7f7;
+  border-right: solid 1px;
+}
+*/
+
+
+
+/*  --- login modal ---- */
+
+.mh-server-path-name {
+    width: 100%;
+}
+
+/*  --- text alert modal ---- */
+
+.mh-quick-reply-input {
+    width: 100%;
+}
+
+.mh-system-message {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ---- activity icons (e.g. home, contacts, ...) */
+
+/*
+.mh-activity {
+  margin-bottom: 0px;
+}
+
+.mh-icon-bar {
+  background-color: #000;
+  height: auto;
+  width: 65px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.mh-icon-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #999;
+  text-align: center;
+  text-decoration: none;
+  height: 88px;
+}
+
+.mh-icon-item > a {
+  color: #999;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 88px;
+  width: 100%;
+}
+
+.mh-icon-item > a.mh-selected {
+  color: #fff;
+  background-color: #515960;
+}
+
+.mh-icon-item > .open > a,
+.mh-icon-item > .active > a {
+  color: #fff;
+  background-color: #515960;
+}
+
+.mh-icon-item > a:hover,
+.mh-icon-item > a:focus {
+  color: #ddd;
+  background-color: #515960;
+}
+
+.mh-icon-texts {
+  width: 50%;
+  background: url(../images/comment-font-awesome.svg) no-repeat top left;
+  background-size: contain;
+}
+
+.mh-icon-contacts {
+  width: 50%;
+  background: url(../images/combined-shape.svg) no-repeat top left;
+  background-size: contain;
+}
+
+.mh-icon-broadcasts {
+  width: 50%;
+  background: url(../images/combined-shape_2.svg) no-repeat top left;
+  background-size: contain;
+}
+
+.mh-icon-patients {
+  width: 50%;
+  background: url(../images/bed-font-awesome.svg) no-repeat top left;
+  background-size: contain;
+}
+*/
+
+/* ---- */
+
+/* JR 10/18/18
+.mh-left-panel {
+  background-color: #e8e8e8;
+  border-right: solid 1px;
+  box-shadow: 1px -4px 7px 0 rgba(0, 0, 0, 0.14);
+}
+*/
+
+/* --- list-row --- */
+
+/* JR 10/18/18
+.mh-list-header-row {
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  border-bottom: 1px solid #c8c8c8;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 27px;
+}
+
+.mh-list-row {
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 33px;
+  text-align: left;
+  align-items: center;
+  font-size: 22px;
+}
+*/
+
+/* --- left-panel menu items -- */
+
+
+/*
+.mh-left-panel a .mh-list-row {
+  color: #333;
+  text-decoration: none;
+}
+
+.mh-left-panel .mh-menu-selected .mh-list-row {
+  background-color: #c0d0e0;
+  text-decoration: none;
+}
+
+.mh-left-panel .mh-menu-selected .mh-list-row > :hover,
+.mh-left-panel .mh-menu-selected .mh-list-row > :focus {
+  color: #555;
+  background-color: #d0e0f0;
+}
+
+
+.mh-left-panel .mh-list-row > .open > a,
+.mh-left-panel .mh-list-row > .active > a {
+  color: #fff;
+}
+
+.mh-left-panel a:hover,
+.mh-left-panel a:focus {
+  color: #555;
+  background-color: #d0e0f0;
+  text-decoration: none;
+}
+
+.mh-left-panel a .mh-list-row > :hover,
+.mh-left-panel a .mh-list-row > :focus {
+  color: #555;
+  background-color: #d0e0f0;
+  text-decoration: none;
+}
+*/
+
+
+/* --- dashboard (home) items */
+
+/* JR 11/1/18
+.mh-list-row.mh-dash-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.mh-list-row.mh-dash-bigName {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-weight: bold;
+  font-size: 16px;
+}
+*/
+
+
+/* --- patient list --- */
+
+/* JR 11/1/18
+.mh-list-row .mh-patient-header {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mh-list-row .mh-patient-detail {
+  color: #999;
+  font-size: 14px;
+}
+*/
+
+/* --- */
+
+/* --- messages --- */
+
+/* JR 11/1/18
+.row.mh-message-list {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.row.mh-message-from {
+  margin-bottom: 6px;
+  margin-right: 10px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 6px;
+  background-color: lightgray;
+  float: left;
+  clear: both;
+  text-align: left;
+}
+
+.row.mh-message-to {
+  margin-bottom: 6px;
+  margin-left: 10px;
+  padding: 4px 10px 4px 10px;
+  border-radius: 6px;
+  background-color: lightblue;
+  float: right;
+  clear: both;
+  text-align: left;
+}
+
+.mh-message-timeStamp {
+  font-size: 10px;
+}
+
+.row.mh-new-message {
+  background-color: #fff;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+}
+
+.mh-message-input {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.mh-message-send {
+  margin-left: 10px;
+}
+
+.mh-message-emoji-button {
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-top: 6px;
+
+}
+*/
+
+/* --- navbar --- */
+
+/* JSR
+.mh-nav .navbar {
+  margin-bottom: 0px;
+}
+
+.mh-nav .navbar-dark {
+  background-image: -webkit-linear-gradient(top, #4466CC 0%, #5577DD 100%);
+  background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+  background-image:         linear-gradient(to bottom, #4466CC 0%, #5577DD 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 0px;
+}
+.mh-nav .navbar-dark .navbar-nav > .open > a,
+.mh-nav .navbar-dark .navbar-nav > .active > a {
+  background-image: -webkit-linear-gradient(top, #080808 0%, #0f0f0f 100%);
+  background-image:      -o-linear-gradient(top, #080808 0%, #0f0f0f 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#080808), to(#0f0f0f));
+  background-image:         linear-gradient(to bottom, #4466CC 0%, #5577DD 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff080808', endColorstr='#ff0f0f0f', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+  box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+}
+.mh-nav .navbar-dark .navbar-brand ,
+.navbar-dark .navbar-nav .mh-nav > li > a {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+}
+
+
+.mh-nav .navbar-dark  {
+  background-color: #222;
+  border-color: #080808;
+}
+.mh-nav .navbar-dark .navbar-brand {
+  color: #fff;
+  font-size: 18pt;
+}
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.mh-nav .navbar-dark .navbar-text {
+  color: #d9d9d9;
+}
+.mh-nav .navbar-dark .navbar-nav > li > a {
+  color: #d9d9d9;
+}
+.navbar-dark .navbar-nav > li > a:hover,
+.navbar-dark .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-dark .navbar-nav > .active > a,
+.navbar-dark .navbar-nav > .active > a:hover,
+.navbar-dark .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+.navbar-dark .navbar-nav > .disabled > a,
+.navbar-dark .navbar-nav > .disabled > a:hover,
+.navbar-dark .navbar-nav > .disabled > a:focus {
+  color: #444;
+  background-color: transparent;
+}
+.navbar-dark .navbar-toggle {
+  border-color: #333;
+}
+.navbar-dark .navbar-toggle:hover,
+.navbar-dark .navbar-toggle:focus {
+  background-color: #333;
+}
+.navbar-dark .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-dark .navbar-collapse,
+.navbar-dark .navbar-form {
+  border-color: #101010;
+}
+.navbar-dark .navbar-nav > .open > a,
+.navbar-dark .navbar-nav > .open > a:hover,
+.navbar-dark .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #080808;
+}
+@media (max-width: 767px) {
+  .navbar-dark .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #080808;
+  }
+  .navbar-dark .navbar-nav .open .dropdown-menu .divider {
+    background-color: #080808;
+  }
+  .navbar-dark .navbar-nav .open .dropdown-menu > li > a {
+    color: #d9d9d9;
+  }
+  .navbar-dark .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-dark .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+  .navbar-dark .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-dark .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-dark .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-color: #080808;
+  }
+  .navbar-dark .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-dark .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-dark .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #444;
+    background-color: transparent;
+  }
+}
+.mh-nav .navbar-dark .navbar-link {
+  color: #d9d9d9;
+}
+.navbar-dark .navbar-link:hover {
+  color: #fff;
+}
+.mh-nav .navbar-dark .btn-link {
+  color: #d9d9d9;
+}
+.navbar-dark .btn-link:hover,
+.navbar-dark .btn-link:focus {
+  color: #fff;
+}
+.navbar-dark .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-dark .btn-link:hover,
+.navbar-dark .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-dark .btn-link:focus {
+  color: #444;
+}
+
+*/
+
+/* end from bootstrap.css */
+

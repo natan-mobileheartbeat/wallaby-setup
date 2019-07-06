@@ -1,0 +1,80 @@
+{
+  "name": "mh-web-app",
+  "version": "0.1.0",
+  "private": true,
+  "productName": "MH-Cure",
+  "description": "MH-Cure Web Client",
+  "author": "Mobile Heartbeat ",
+  "url": "https://www.mobileheartbeat.com",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^5.4.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.5",
+    "@fortawesome/free-solid-svg-icons": "^5.4.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "bootstrap": "4.1.3",
+    "connected-react-router": "^5.0.1",
+    "crypto-js": "^3.1.9-1",
+    "dom-scroll-into-view": "^1.2.1",
+    "emoji-mart": "^2.8.0",
+    "is-electron": "^2.1.0",
+    "jszip": "3.2.1",
+    "lodash.get": "^4.4.2",
+    "moment": "^2.24.0",
+    "node-sass": "^4.9.3",
+    "rc-checkbox": "^2.1.6",
+    "react": "^16.4.1",
+    "react-bootstrap": "1.0.0-beta.5",
+    "react-dom": "^16.4.1",
+    "react-grid-system": "^4.4.2",
+    "react-idle-timer": "^4.2.3",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^3.0.1",
+    "stanza.io": "^9.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "flow": "flow",
+    "flow-typed": "rimraf flow-typed/npm && flow-typed install --overwrite || true",
+    "test": "react-scripts test --env=jsdom",
+    "test-c": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-flow-runtime": "^0.19.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "flow-bin": "^0.80.0",
+    "flow-typed": "^2.5.1",
+    "husky": "^2.5.0",
+    "jest-fetch-mock": "^1.6.6",
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.4.1",
+    "redux-mock-store": "^1.5.3",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0"
+  },
+  "homepage": ".",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits"
+    }
+  }
+}

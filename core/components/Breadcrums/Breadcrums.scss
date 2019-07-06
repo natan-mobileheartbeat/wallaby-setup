@@ -1,0 +1,15 @@
+@import '../../styles/index';
+
+.mh-breadcrumbs {
+  height: 60px;
+  padding: 20px;
+  padding-left: 30px;
+  background-color: $gray-light;
+  border-bottom: 1px solid $gray-4c;
+  border-left: 1px solid $gray-4c;
+  .mh-bc-item {
+    color: $blue-light;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
