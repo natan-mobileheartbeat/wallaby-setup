@@ -1,8 +1,3 @@
-//const Enzyme = require('enzyme');
-//const Adapter = require('enzyme-adapter-react-16');
-// import {configure} from "enzyme";
-// import Adapter from "enzyme-adapter-react-16";
-
 module.exports = function (wallaby) {
 
     // Babel, jest-cli and some other modules may be located under
@@ -16,25 +11,17 @@ module.exports = function (wallaby) {
     require('module').Module._initPaths();
 
     return {
-        jest: {
-            "setupFiles": ["./setupTests.js"]
-        },
         files: [
-            //'jsconfig.json',
-            //'./core/try.js'
-            './**/*.+(js|jsx|json|snap|css|less|sass|scss|jpg|jpeg|gif|png|svg|wav)',
-            '!./**/*.test.js?(x)',
-            '!./node_modules/**',
-            '!./electron_build/**'
+            '**/*.+(js|jsx|json|snap|css|less|sass|scss|jpg|jpeg|gif|png|svg|wav)',
+            '!**/*.test.js?(x)',
+            '!node_modules/**',
+            '!electron_build/**'
         ],
 
         tests: [
-            //'./**/*.test.js',
             '**/*.test.js?(x)',
-            '!./node_modules/**',
-            '!./electron_build/**'
-            // './core/actions/contactsActions.test.js',
-            // './core/actions/dynamicRoleActions.test.js'
+            '!node_modules/**',
+            '!electron_build/**'
         ],
 
         env: {
@@ -49,14 +36,12 @@ module.exports = function (wallaby) {
         },
 
         setup: wallaby => {
-            // const Enzyme = require('enzyme');// import { configure } from 'enzyme';
-            // const Adapter = require('enzyme-adapter-react-16');
-            // Enzyme.configure({ adapter: new Adapter() });
             const createJestConfigUtil = require('react-scripts/scripts/utils/createJestConfig');
             const jestConfig = createJestConfigUtil(p => require.resolve('react-scripts/' + p));
             Object.keys(jestConfig.transform || {})
                 .forEach(k => ~k.indexOf('^.+\\.(js|jsx') && void delete jestConfig.transform[k]);
             delete jestConfig.testEnvironment;
+            jestConfig.setupFiles = ['./setupTests.js'];
             wallaby.testFramework.configure(jestConfig);
         },
 

@@ -4,7 +4,7 @@ import BreadCrums from './BreadCrums';
 
 
 describe('BreadCrums tests', () => {
-  fit('should render bread crums', () => {
+  it('should render bread crums', () => {
     const crums = ['first', 'second', 'third'];
     const wrapper = shallow(<BreadCrums crums={crums} />);
     expect(wrapper).toBeTruthy();
